@@ -1,0 +1,7 @@
+[2018-09-14 18:17:14.922] [INFO] access - GET /
+[2018-09-14 18:17:15.056] [INFO] access - GET /themes/default/assets/css/bootstrap.min.css
+[2018-09-14 18:17:15.070] [INFO] access - GET /themes/default/assets/css/main.css
+[2018-09-14 18:17:15.098] [INFO] access - GET /themes/default/assets/img/logo.png
+[2018-09-14 18:17:15.125] [INFO] access - GET /themes/default/assets/js/bootstrap.min.js
+[2018-09-14 18:17:15.127] [INFO] access - GET /themes/default/assets/js/jquery-2.2.1.min.js
+[2018-09-14 18:17:26.615] [INFO] access - GET /

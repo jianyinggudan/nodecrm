@@ -1,0 +1,4 @@
+[2018-09-16 14:05:41.069] [INFO] access - GET /
+[2018-09-16 14:11:14.357] [INFO] access - GET /
+[2018-09-16 14:19:40.166] [INFO] access - GET /manager/html
+[2018-09-16 14:49:43.122] [INFO] access - HEAD http://112.124.42.80:63435/

@@ -1,0 +1,14 @@
+{
+    "apps": [
+        {
+            "name": "nodercms",
+            "script": "./bin/www",
+            "instances": 5,
+            "exec_mode": "fork",
+            "exec_interpreter": "/home/dc2-user/nvm-master/versions/node/v6.14.4/bin/node",
+            "env": {
+			"port": 80
+		}
+        }
+    ]
+}

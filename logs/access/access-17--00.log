@@ -1,0 +1,4 @@
+[2018-09-17 00:11:20.788] [INFO] access - GET /.ssh/id_rsa
+[2018-09-17 00:26:23.368] [INFO] access - POST /auth/login
+[2018-09-17 00:41:47.124] [ERROR] access - POST /j_spring_security_check
+[2018-09-17 00:56:24.994] [ERROR] access - GET /api/security/ticket

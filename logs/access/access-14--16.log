@@ -1,0 +1,14 @@
+[2018-09-14 16:57:09.242] [INFO] access - GET /
+[2018-09-14 16:57:09.467] [INFO] access - GET /themes/default/assets/css/bootstrap.min.css
+[2018-09-14 16:57:09.532] [INFO] access - GET /themes/default/assets/img/logo.png
+[2018-09-14 16:57:09.560] [INFO] access - GET /themes/default/assets/css/main.css
+[2018-09-14 16:57:09.564] [INFO] access - GET /themes/default/assets/js/bootstrap.min.js
+[2018-09-14 16:57:09.578] [INFO] access - GET /themes/default/assets/js/jquery-2.2.1.min.js
+[2018-09-14 16:57:10.059] [INFO] access - GET /themes/default/assets/css/bootstrap.min.css.map
+[2018-09-14 16:57:12.346] [INFO] access - GET /
+[2018-09-14 16:57:12.531] [INFO] access - GET /themes/default/assets/img/logo.png
+[2018-09-14 16:57:12.558] [INFO] access - GET /themes/default/assets/css/main.css
+[2018-09-14 16:57:12.562] [INFO] access - GET /themes/default/assets/js/bootstrap.min.js
+[2018-09-14 16:57:12.576] [INFO] access - GET /themes/default/assets/js/jquery-2.2.1.min.js
+[2018-09-14 16:57:12.578] [INFO] access - GET /themes/default/assets/css/bootstrap.min.css
+[2018-09-14 16:57:12.954] [INFO] access - GET /themes/default/assets/css/bootstrap.min.css.map

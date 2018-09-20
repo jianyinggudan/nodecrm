@@ -1,0 +1,8 @@
+[2018-09-17 12:03:41.061] [INFO] access - GET /management
+[2018-09-17 12:11:35.016] [INFO] access - GET /nmask_is_not_exists.txt
+[2018-09-17 12:11:35.162] [INFO] access - GET /fileadmin/mobile_site/templates/docs/forms/forms-sample-response.php?shipping=%22%3E%3Cimg%20src=%22http://url.to.file.which/not.exist%22%20onerror=alert(1);%3E
+[2018-09-17 12:20:04.107] [INFO] access - GET /
+[2018-09-17 12:27:36.537] [INFO] access - GET /
+[2018-09-17 12:39:27.409] [INFO] access - GET /?url=%0aX-XSS-Protection:%200%0a%0d%0a%0d%3Cimg%20src=1%20onerror=alert(/xss/)%3E
+[2018-09-17 12:49:58.006] [INFO] access - GET /
+[2018-09-17 12:54:34.425] [INFO] access - GET /manage/ckfinder/ckfinder.html
