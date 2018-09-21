@@ -230,3 +230,16 @@ h6, .h6 {
   text-align: center;
   color: #777;
 }
+.container b{
+    line-height: 28px;
+    font-size: 14px;
+    text-align: left;
+    color: #323232;
+}
+.container .bottom_p{
+    line-height: 22px;
+    font-size: 12px;
+    text-indent: 2em;
+    color: #111;
+    text-align: left;
+}
