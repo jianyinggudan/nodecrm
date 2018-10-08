@@ -246,4 +246,5 @@ h6, .h6 {
 .ba_info a{
     font-size: 12px;
     text-decoration: underline;
+    margin-left: 20px;
 }
