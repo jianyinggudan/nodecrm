@@ -243,3 +243,7 @@ h6, .h6 {
     color: #111;
     text-align: left;
 }
+.ba_info a{
+    font-size: 12px;
+    text-decoration: underline;
+}

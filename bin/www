@@ -13,7 +13,6 @@ var installService = require('../core/services/install.service');
  * 设置端口
  */
 app.set('port', port);
-
 /**
  * 启动服务器
  */
