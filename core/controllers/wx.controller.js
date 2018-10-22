@@ -17,7 +17,9 @@ module.exports = function (req, res, next) {
     nonce = q.nonce,
     echostr = q.echostr,
     signature = q.signature;
-    
+    echostr = '5926610512705867247';
+    timestamp = '1540179365'
+    nonce = '646708963'
     // var data = {
     //     token:"aaaa",
     //     "timestamp":new Date().getTime(),
@@ -25,6 +27,7 @@ module.exports = function (req, res, next) {
     // }
     var str = [token, timestamp, nonce].sort().join('');
     var sha = sha1(str);
+    console.log(sha)
     if (req.method == 'GET') {
  
         if (sha == signature) {
