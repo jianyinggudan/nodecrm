@@ -57,7 +57,9 @@ module.exports = {
     '/dashboard': {
       get: 'dashboard'
     },
-
+    '/wx':{
+      get: 'wx'
+    },
     // 用户
     '/users': {
       get: 'users.get'

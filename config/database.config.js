@@ -1,6 +1,6 @@
 {
   "host": "localhost",
-  "port": 27017,
+  "port": 27027,
   "db": "nodercms",
   "user": "nodercms",
   "pass": "nodercms"
