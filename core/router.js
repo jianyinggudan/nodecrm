@@ -8,7 +8,12 @@ module.exports = {
   '/admin*': {
     get: 'admin'
   },
-
+  '/wx':{
+    get: 'wx'
+  },
+  '/heim':{
+    get: 'heim'
+  },
   /**
    * API
    */
@@ -56,9 +61,6 @@ module.exports = {
     // 控制面板数据
     '/dashboard': {
       get: 'dashboard'
-    },
-    '/wx':{
-      get: 'wx'
     },
     // 用户
     '/users': {

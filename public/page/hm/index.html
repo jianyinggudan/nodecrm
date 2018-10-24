@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <title>贝米崔炜、姚坤杰还我血汗钱</title>
+</head>
+<body>
+    <link rel="stylesheet" href="/themes/default/assets/css/style.css">
+<style type="text/css">
+*{
+    margin: 0;
+    padding:0;
+}
+html,body{
+    height: 100%
+}
+#main,#main2{
+    width: 100%;
+    height: 100%
+}
+.con_div h6{
+    padding-left: 40px;
+    font-size: 14px;
+    color: #fff;
+}
+</style>
+<div style="display:none;"><img src="../images/xhq.png" alt=""></div>
+<div class="wrap">
+  
+  <ul class="tabs group">
+    <li><a class="active" href="javascript:;">总回款汇总</a></li>
+    <li><a href="javascript:;">每日回款</a></li>
+    <li><a href="javascript:;">态度观点</a></li>
+  </ul>
+  
+  <div id="content">
+    <div class="con_div" style="display: block;">
+        <p class="top_txt">今日回款：<span id="todySpan">暂未公布</span></p>
+        <ul class="txt_ul">
+            <li>昨日回款</li>
+            <li>总回款额</li>
+            <li>累计回款</li>
+            <li>百分比</li>
+        </ul>
+        <ul class="txt_ul" id="showUl">
+            <li></li>
+            <li>41.97亿</li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+    <div class="con_div">
+        <div id="main"></div>
+    </div>
+    <div class="con_div">
+        <div class="cont_div">
+            
+            <h6>维权人士：</h6>
+            <p class="normal_t">
+                请加入揭秘黑米群，该群是一个没有水军、专业、有真材实料，开放，还充满人情味的QQ群。为了让群可以扩大到最大人数，群内一位投资人花费数百元悄悄为此群购买了QQ超级会员资格，让群主和投资人非常感动。
+    本群严格验资，进临时验资群号为：684851601，主动找管理员验资，完毕会被管理员拉进正式群。
+            </p>   
+            <h6>其他人士：</h6>  
+            <p class="normal_t">贝米崔姚的一而再，再而三的欺骗出借人的信任。账面没有任何款项的所谓兑付计划；公告退出前的离婚；拿出借人的钱炒股；雇保镖打人；财产转移等一系列的事情，都揭示了贝米的信任危机。</p>
+        </div>
+    </div>
+  </div>
+  
+</div>
+
+
+
+<script type="text/javascript" src="/themes/default/assets/js/echarts.common.min.js"></script>
+<script type="text/javascript" src='/themes/default/assets/js/jquery-2.2.1.min.js'></script>
+<script type="text/javascript">
+
+function getOption(dateList,valueList){
+    var option = {
+        color: ['#3398DB'],
+        title: {
+            left: 'center',
+            text: '每日回款数额',
+            textStyle:{
+                color:'#fff'
+            }
+        },
+        tooltip: {
+            trigger: 'axis'
+        },
+        xAxis: [ {
+            data: dateList,
+            nameTextStyle:{
+                color:"#fff"
+            },
+            axisLine:{
+                lineStyle:{
+                    color:"#fff"
+                }
+            },
+            axisLabel:{
+                color:"#fff"
+            }
+            // gridIndex: 1
+        }],
+        yAxis: [ {
+            splitLine: {show: false},
+            axisLine:{
+                lineStyle:{
+                    color:"#fff"
+                }
+            },
+            axisLabel:{
+                color:"#fff"
+            }
+            // gridIndex: 1
+        }],
+        grid: [{
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        }],
+        series: [{
+            type: 'line',
+            showSymbol: false,
+            data: valueList,
+            // xAxisIndex: 1,
+            // yAxisIndex: 1
+        }]
+    };
+    return option;
+}
+
+$(function(){
+$.ajax({
+    'url':'/heim',
+    'dataType':'json'
+}).done(function(json){
+
+    var option = getOption(json.dataList,json.moneyArr);
+
+    init(option,json.allCount,json.moneyArr,json.dataList)
+})
+
+
+// var option1 = {
+//     color: ['#3398DB'],
+//     title: [{
+//         left: 'center',
+//         text: '每日回款数额',
+//         textStyle:{
+//             color:'#fff'
+//         }
+//     }],
+//     tooltip : {
+//         trigger: 'axis',
+//         axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+//             type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+//         }
+//     },
+//     grid: {
+//         left: '3%',
+//         right: '4%',
+//         bottom: '3%',
+//         containLabel: true
+//     },
+//     xAxis : [
+//         {
+//             type : 'category',
+//             data : dateList,
+//             axisTick: {
+//                 alignWithLabel: true
+//             },
+//             axisLabel:{
+//                 color:"#fff"
+//             },
+//             axisLine:{
+//                 lineStyle:{
+//                     color:"#fff"
+//                 }
+//             }
+//         }
+//     ],
+//     yAxis : [
+//         {
+//             type : 'value',
+//             axisLabel:{
+//                 color:"#fff"
+//             },
+//             axisLine:{
+//                 lineStyle:{
+//                     color:"#fff"
+//                 }
+//             }
+//         }
+//     ],
+//     series : [
+//         {
+//             name:'回款',
+//             type:'bar',
+//             barWidth: '60%',
+//             data:valueList
+//         }
+//     ]
+// };
+
+
+function init(option,allCount,moneyArr,dataList){
+
+    $(".tabs li a").on('click',function(){
+        var index = $(this).parent().index();
+        $(".tabs li a").removeClass('active');
+        $(this).addClass('active');
+        $('#content .con_div').hide();
+        $('#content .con_div').eq(index).show()
+        if(index == 1){
+            
+            echarts.init(document.getElementById('main')).setOption(option);
+        }
+        if(index == 2){
+            // echarts.init(document.getElementById('main2')).setOption(option1);
+        }
+    });
+    if(moneyArr.length == dataList.lenth){
+        $('#todySpan').text(moneyArr[moneyArr.length - 1] + '万');
+    }
+    $('#showUl').find('li').eq(0).text(moneyArr[moneyArr.length - 1]+ ' 万')
+    $('#showUl').find('li').eq(2).text((allCount/10000).toFixed(4)+ ' 亿')
+    $('#showUl').find('li').eq(3).text((allCount/4197).toFixed(2)+ ' %')
+}
+})
+</script>
+</body>
+</html>
