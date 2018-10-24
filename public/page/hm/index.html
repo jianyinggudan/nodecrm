@@ -222,10 +222,12 @@ function init(option,allCount,moneyArr,dataList){
             // echarts.init(document.getElementById('main2')).setOption(option1);
         }
     });
-    if(moneyArr.length == dataList.lenth){
+    if(moneyArr.length == dataList.length){
         $('#todySpan').text(moneyArr[moneyArr.length - 1] + '万');
+        $('#showUl').find('li').eq(0).text(moneyArr[moneyArr.length - 2]+ ' 万')
+    }else{
+        $('#showUl').find('li').eq(0).text(moneyArr[moneyArr.length - 1]+ ' 万')
     }
-    $('#showUl').find('li').eq(0).text(moneyArr[moneyArr.length - 1]+ ' 万')
     $('#showUl').find('li').eq(2).text((allCount/10000).toFixed(4)+ ' 亿')
     $('#showUl').find('li').eq(3).text((allCount/4197).toFixed(2)+ ' %')
 }
