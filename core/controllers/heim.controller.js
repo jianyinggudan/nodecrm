@@ -41,7 +41,10 @@ module.exports = function (req, res) {
         if (err) {
             res.status(200).json({"err":"1","msg":"数据错误"});
         } else {
-            var moneyArr = JSON.parse(data).data;
+            var dataJson = JSON.parse(data)
+            var moneyArr = dataJson.data;
+            var wqtxt = dataJson.wqtxt;
+            var qttxt = dataJson.qttxt;
             var allCount = 0;
             for(var i = 0; i < moneyArr.length; i ++){
                 allCount += (moneyArr[i] - 0)
@@ -50,7 +53,9 @@ module.exports = function (req, res) {
                 "err":"0",
                 "dataList":dateList,
                 "moneyArr":moneyArr,
-                "allCount":allCount
+                "allCount":allCount,
+                "wqtxt":wqtxt,
+                "qttxt":qttxt
             }
             res.send(endData);
             // res.status(200).json(JSON.parse(data));

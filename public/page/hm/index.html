@@ -57,12 +57,11 @@ html,body{
         <div class="cont_div">
             
             <h6>维权人士：</h6>
-            <p class="normal_t">
-                请加入揭秘黑米群，该群是一个没有水军、专业、有真材实料，开放，还充满人情味的QQ群。为了让群可以扩大到最大人数，群内一位投资人花费数百元悄悄为此群购买了QQ超级会员资格，让群主和投资人非常感动。
-    本群严格验资，进临时验资群号为：684851601，主动找管理员验资，完毕会被管理员拉进正式群。
+            <p class="normal_t" id="wqTxt">
+                
             </p>   
             <h6>其他人士：</h6>  
-            <p class="normal_t">贝米崔姚的一而再，再而三的欺骗出借人的信任。账面没有任何款项的所谓兑付计划；公告退出前的离婚；拿出借人的钱炒股；雇保镖打人；财产转移等一系列的事情，都揭示了贝米的信任危机。</p>
+            <p class="normal_t" id="qtTxt"></p>
         </div>
     </div>
   </div>
@@ -140,7 +139,7 @@ $.ajax({
 
     var option = getOption(json.dataList,json.moneyArr);
 
-    init(option,json.allCount,json.moneyArr,json.dataList)
+    init(json,option,json.allCount,json.moneyArr,json.dataList)
 })
 
 
@@ -206,8 +205,9 @@ $.ajax({
 // };
 
 
-function init(option,allCount,moneyArr,dataList){
-
+function init(allData,option,allCount,moneyArr,dataList){
+    $('#wqTxt').html(allData.wqtxt);
+    $('#qtTxt').html(allData.qttxt);
     $(".tabs li a").on('click',function(){
         var index = $(this).parent().index();
         $(".tabs li a").removeClass('active');
