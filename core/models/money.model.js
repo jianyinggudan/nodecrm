@@ -3,7 +3,7 @@ var mongoose = require('mongoose');
 /**
  * 回款模型
  */
- var moneySchema = new mogoose.Schema({
+ var moneySchema = new mongoose.Schema({
      // 日期
      date: {
        type: Date,
@@ -22,4 +22,4 @@ var mongoose = require('mongoose');
  /**
   * 发布为模型
   */
-model.exports = mongoose.model('Moneys',moneySchema)
+module.exports = mongoose.model('Moneys',moneySchema)

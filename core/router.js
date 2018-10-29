@@ -14,6 +14,10 @@ module.exports = {
   '/heim':{
     get: 'heim'
   },
+  '/getmoney':{
+      get: 'getmoney.list',
+      post: 'getmoney.create'
+  },
   /**
    * API
    */
