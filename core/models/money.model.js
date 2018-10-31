@@ -3,11 +3,12 @@ var mongoose = require('mongoose');
 /**
  * 回款模型
  */
+
  var moneySchema = new mongoose.Schema({
      // 日期
      date: {
-       type: Date,
-       default: Date.now
+       type: String,
+       required: true
      },
      // 钱数
      money:{

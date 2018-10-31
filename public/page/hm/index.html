@@ -27,13 +27,13 @@ html,body{
 </style>
 <div style="display:none;"><img src="../images/xhq.png" alt=""></div>
 <div class="wrap">
-  
+
   <ul class="tabs group">
     <li><a class="active" href="javascript:;">总回款汇总</a></li>
     <li><a href="javascript:;">每日回款</a></li>
     <li><a href="javascript:;">态度观点</a></li>
   </ul>
-  
+
   <div id="content">
     <div class="con_div" style="display: block;">
         <p class="top_txt">今日回款：<span id="todySpan">暂未公布</span></p>
@@ -55,17 +55,17 @@ html,body{
     </div>
     <div class="con_div">
         <div class="cont_div">
-            
+
             <h6>维权人士：</h6>
             <p class="normal_t" id="wqTxt">
-                
-            </p>   
-            <h6>其他人士：</h6>  
+
+            </p>
+            <h6>其他人士：</h6>
             <p class="normal_t" id="qtTxt"></p>
         </div>
     </div>
   </div>
-  
+
 </div>
 
 
@@ -136,12 +136,33 @@ $.ajax({
     'url':'/heim',
     'dataType':'json'
 }).done(function(json){
-
     var option = getOption(json.dataList,json.moneyArr);
-
+    var datalist = json.dataList;
+    var moneyArr = json.moneyArr;
+    for(var i = 0;i < 3;i++){
+        saveData(datalist[i],moneyArr[i])
+    }
     init(json,option,json.allCount,json.moneyArr,json.dataList)
+    // datalist.forEach(function(item,index){
+    //
+    // })
 })
-
+function saveData(data,money){
+    var data = {
+        'date':data,
+        'money':money
+    }
+    $.ajax({
+        "type":"post",
+        'url':'/getmoney',
+        "data":data,
+        "dataType":"json"
+    }).done(function(json){
+        console.log(json)
+    }).fail(function(e){
+        console.log(e)
+    })
+}
 
 // var option1 = {
 //     color: ['#3398DB'],
@@ -215,7 +236,7 @@ function init(allData,option,allCount,moneyArr,dataList){
         $('#content .con_div').hide();
         $('#content .con_div').eq(index).show()
         if(index == 1){
-            
+
             echarts.init(document.getElementById('main')).setOption(option);
         }
         if(index == 2){

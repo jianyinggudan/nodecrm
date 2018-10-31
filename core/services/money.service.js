@@ -1,7 +1,7 @@
 var _ = require('lodash');
 var async = require('async');
 var moneyModel = require('../models/money.model');
-
+var adviceModel = require('../models/advice.model');
 /**
  * 所有数据列表
  */
@@ -50,8 +50,9 @@ var moneyModel = require('../models/money.model');
           }
           return callback(err);
       }
-
+      console.log('=======',options)
       var _id = options._id;
+      var data = options.data;
       if(_id){
           moneyModel.update({ _id: _id}, data, { runValidators: true}, function(err){
               if(err){

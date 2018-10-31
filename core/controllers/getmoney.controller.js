@@ -17,20 +17,26 @@ exports.list =  function(req, res){
  * 创建
  */
  exports.create = function(req, res){
+
      req.checkBody({
          'date':{
-             options: true,
-             isString: {errorMessage: 'date 需为字符串' }
-         },
+ 			notEmpty: {
+ 				options: [true],
+ 				errorMessage: 'data 不能为空'
+ 			}
+ 		},
          'money':{
-             options: true,
-             isNumber: {errorMessage: 'money 为数字'}
+             notEmpty: {
+  				options: [true],
+  				errorMessage: 'money 不能为空'
+  			}
          }
      });
      var data = {
          date: req.body.date,
          money: req.body.money || 0
      }
+     // console.log(data)
      moneyServer.save({data: data },function(err, role){
          if(err){
              logger[err.type]().error(__filename, err);

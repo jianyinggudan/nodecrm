@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>输入写入</title>
+    <link rel="stylesheet" href="/themes/default/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/themes/default/assets/css/mobiscroll.min.css">
+</head>
+<body>
+    <div class="form-inline">
+      <div class="form-group">
+        <label for="selectdate">日期</label>
+        <input type="text" class="form-control" id="selectdate" placeholder="日期">
+      </div>
+      <div class="form-group">
+        <label for="moneyInput">回款</label>
+        <input type="email" class="form-control" id="moneyInput" placeholder="回款">
+      </div>
+      <button type="button" class="btn btn-default" id="addNew">添加</button>
+      <button type="button" class="btn btn-default" id="search">查询</button>
+  </div>
+    <table class="table table-condensed" id="dataTable">
+        <thead>
+            <tr>
+                <th>日期</th>
+                <th>回款</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script type="text/javascript" src="/themes/default/assets/js/jquery-2.2.1.min.js"></script>
+    <script type="text/javascript" src="/themes/default/assets/js/mobiscrollv2.1.js"></script>
+    <script type="text/javascript">
+    var oDate=new Date();
+    var opt = {
+        preset: 'date',
+        theme:'android-ics light',
+        mode:'scroller',
+        dateFormat : 'yy-mm-dd',
+        display:'bottom',
+        lang:'zh',
+        dateOrder : 'yymmdd',
+        showLabel:false,
+        startYear:oDate.getFullYear(),
+        endYear : oDate.getFullYear()+10
+     };
+     $('#selectdate').mobiscroll(opt);
+     $('#addNew').on('click',function(){
+         var data = {
+             'date':$('#selectdate').val(),
+             'money':$('#moneyInput').val()
+         }
+         $.ajax({
+             "type":"post",
+             'url':'/getmoney',
+             "data":data,
+             "dataType":"json"
+         }).done(function(json){
+             console.log(json)
+         }).fail(function(e){
+             console.log(e)
+         })
+     });
+    $('#search').on('click',function(){
+        $.ajax({
+            "type":"get",
+            'url':'/getmoney',
+            "dataType":"json"
+        }).done(function(json){
+            var str = creatDom(json);
+            $('#dataTable tbody').html(str);
+        }).fail(function(e){
+            console.log(e)
+        })
+    });
+    $('#dataTable').on('click','.change-btn',function(){
+        console.log($(this).prev())
+    })
+    function creatDom(arr){
+        var tmp = []
+        for(var i = 0; i < arr.length; i++){
+            tmp.push('<tr><td><input type="text" value="'+arr[i].date+'"></td>')
+            tmp.push('<td><input type="text" value="'+ arr[i].money+'"></td>')
+            tmp.push('<td><input type="hidden" value="'+ arr[i]._id +'"><a href="Javascript:;" class="change-btn">修改</a></td></tr>')
+        }
+        return tmp.join('')
+    }
+    </script>
+</body>
+</html>
