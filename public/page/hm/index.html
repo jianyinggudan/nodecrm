@@ -36,7 +36,7 @@ html,body{
 
   <div id="content">
     <div class="con_div" style="display: block;">
-        <p class="top_txt">今日回款：<span id="todySpan">暂未公布</span></p>
+        <p class="top_txt">今日回款：<span id="todySpan">暂未公布</span>&nbsp;累计天数:<span id="allDay"></span>天</p>
         <ul class="txt_ul">
             <li>昨日回款</li>
             <li>总回款额</li>
@@ -139,14 +139,21 @@ $.ajax({
     var option = getOption(json.dataList,json.moneyArr);
     var datalist = json.dataList;
     var moneyArr = json.moneyArr;
-    for(var i = 0;i < 3;i++){
-        saveData(datalist[i],moneyArr[i])
+    console.log(datalist.length,moneyArr.length)
+    for(var i = 0;i < moneyArr.length;i++){
+        // saveData(datalist[i],moneyArr[i])
     }
     init(json,option,json.allCount,json.moneyArr,json.dataList)
     // datalist.forEach(function(item,index){
     //
     // })
 })
+// $.ajax({
+//     'url':'/heim',
+//     'dataType':'json'
+// }).done(function(json){
+//     initAdvice(json)
+// })
 function saveData(data,money){
     var data = {
         'date':data,
@@ -224,11 +231,13 @@ function saveData(data,money){
 //         }
 //     ]
 // };
-
-
-function init(allData,option,allCount,moneyArr,dataList){
+function initAdvice(allData){
     $('#wqTxt').html(allData.wqtxt);
     $('#qtTxt').html(allData.qttxt);
+}
+
+function init(option,allCount,moneyArr,dataList){
+
     $(".tabs li a").on('click',function(){
         var index = $(this).parent().index();
         $(".tabs li a").removeClass('active');
@@ -249,6 +258,7 @@ function init(allData,option,allCount,moneyArr,dataList){
     }else{
         $('#showUl').find('li').eq(0).text(moneyArr[moneyArr.length - 1]+ ' 万')
     }
+    $('#allDay').text(dataList.length)
     $('#showUl').find('li').eq(2).text((allCount/10000).toFixed(4)+ ' 亿')
     $('#showUl').find('li').eq(3).text((allCount/4197).toFixed(2)+ ' %')
 }

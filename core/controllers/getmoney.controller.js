@@ -6,11 +6,20 @@ var moneyServer = require('../services/money.service');
  */
 exports.list =  function(req, res){
     moneyServer.all(function(err, roles){
+        var allCount = 0;
         if(err){
             logger[err.type]().error(err);
             return res.status(500).end();
         }
-        res.status(200).json(roles);
+        for(var i = 0; i < roles.length; i ++){
+            allCount += (roles[i].money - 0)
+        }
+        var endData = {
+            "err":"0",
+            "roles":roles,
+            "allCount":allCount
+        }
+        res.status(200).json(endData);
     })
 }
 /**

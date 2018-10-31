@@ -72,7 +72,7 @@
             'url':'/getmoney',
             "dataType":"json"
         }).done(function(json){
-            var str = creatDom(json);
+            var str = creatDom(json.roles);
             $('#dataTable tbody').html(str);
         }).fail(function(e){
             console.log(e)
