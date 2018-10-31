@@ -236,8 +236,9 @@ function initAdvice(allData){
     $('#qtTxt').html(allData.qttxt);
 }
 
-function init(option,allCount,moneyArr,dataList){
-
+function init(allData,option,allCount,moneyArr,dataList){
+    $('#wqTxt').html(allData.wqtxt);
+    $('#qtTxt').html(allData.qttxt);
     $(".tabs li a").on('click',function(){
         var index = $(this).parent().index();
         $(".tabs li a").removeClass('active');
