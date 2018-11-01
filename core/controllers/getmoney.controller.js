@@ -7,9 +7,14 @@ var moneyServer = require('../services/money.service');
 exports.list =  function(req, res){
     moneyServer.all(function(err, roles){
         var allCount = 0;
+        var today = false;
         if(err){
             logger[err.type]().error(err);
             return res.status(500).end();
+        }
+        time = roles[roles.length - 1].date.split('-');
+        if(new Date().getTime() == new Date().setFullYear(time[0],Number(time[1]) - 1,time[2])){
+            today = true;
         }
         for(var i = 0; i < roles.length; i ++){
             allCount += (roles[i].money - 0)
@@ -17,7 +22,8 @@ exports.list =  function(req, res){
         var endData = {
             "err":"0",
             "roles":roles,
-            "allCount":allCount
+            "allCount":allCount,
+            "today":today
         }
         res.status(200).json(endData);
     })
@@ -51,6 +57,10 @@ exports.list =  function(req, res){
              logger[err.type]().error(__filename, err);
              return res.status(500).end();
          }
-         res.status(200).json(role);
+         var data = {
+             'err':0,
+             'data':role
+         }
+         res.status(200).json(data);
      })
  }

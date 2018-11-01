@@ -7,6 +7,7 @@ var adviceModel = require('../models/advice.model');
  */
  exports.all = function(callback){
      moneyModel.find({})
+     .sort({date:1})
      .lean()
      .exec(function(err, moneys){
          if(err){

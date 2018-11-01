@@ -133,27 +133,31 @@ function getOption(dateList,valueList){
 
 $(function(){
 $.ajax({
+    'url':'/getmoney',
+    'dataType':'json'
+}).done(function(json){
+    var datalist = [],moneyArr = [];
+    if(json.err == 0){
+        json.roles.forEach(function(item,index){
+            datalist.push(item.date);
+            moneyArr.push(item.money);
+        })
+        var option = getOption(datalist,moneyArr);
+
+        init(option,json.allCount,moneyArr,datalist,json.today)
+    }else{
+        alert('数据错误有误')
+    }
+})
+$.ajax({
     'url':'/heim',
     'dataType':'json'
 }).done(function(json){
-    var option = getOption(json.dataList,json.moneyArr);
-    var datalist = json.dataList;
-    var moneyArr = json.moneyArr;
-    console.log(datalist.length,moneyArr.length)
-    for(var i = 0;i < moneyArr.length;i++){
-        // saveData(datalist[i],moneyArr[i])
+    initAdvice(json)
+    for(var i = 0;i < json.moneyArr.length;i++){
+        //saveData(json.dataList[i],json.moneyArr[i])
     }
-    init(json,option,json.allCount,json.moneyArr,json.dataList)
-    // datalist.forEach(function(item,index){
-    //
-    // })
 })
-// $.ajax({
-//     'url':'/heim',
-//     'dataType':'json'
-// }).done(function(json){
-//     initAdvice(json)
-// })
 function saveData(data,money){
     var data = {
         'date':data,
@@ -236,9 +240,9 @@ function initAdvice(allData){
     $('#qtTxt').html(allData.qttxt);
 }
 
-function init(allData,option,allCount,moneyArr,dataList){
-    $('#wqTxt').html(allData.wqtxt);
-    $('#qtTxt').html(allData.qttxt);
+function init(option,allCount,moneyArr,dataList,betrue){
+    // $('#wqTxt').html(allData.wqtxt);
+    // $('#qtTxt').html(allData.qttxt);
     $(".tabs li a").on('click',function(){
         var index = $(this).parent().index();
         $(".tabs li a").removeClass('active');
@@ -253,7 +257,7 @@ function init(allData,option,allCount,moneyArr,dataList){
             // echarts.init(document.getElementById('main2')).setOption(option1);
         }
     });
-    if(moneyArr.length == dataList.length){
+    if(betrue){
         $('#todySpan').text(moneyArr[moneyArr.length - 1] + '万');
         $('#showUl').find('li').eq(0).text(moneyArr[moneyArr.length - 2]+ ' 万')
     }else{

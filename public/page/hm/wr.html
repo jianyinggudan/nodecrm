@@ -61,7 +61,11 @@
              "data":data,
              "dataType":"json"
          }).done(function(json){
-             console.log(json)
+            if(json.err == 0){
+                console.log('添加成功');
+                $('#selectdate').val('')
+                $('#moneyInput').val('')
+            }
          }).fail(function(e){
              console.log(e)
          })
