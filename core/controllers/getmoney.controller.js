@@ -5,7 +5,8 @@ var moneyServer = require('../services/money.service');
  * 获取列表
  */
 exports.list =  function(req, res){
-    moneyServer.all(function(err, roles){
+
+    moneyServer.all({"type":req.query.type},function(err, roles){
         var allCount = 0;
         var today = false;
         if(err){

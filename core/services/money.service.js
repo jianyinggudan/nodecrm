@@ -5,9 +5,14 @@ var adviceModel = require('../models/advice.model');
 /**
  * 所有数据列表
  */
- exports.all = function(callback){
+ exports.all = function(options,callback){
+    console.log('options',options)
+    var type = 1;
+    if(options.type){
+      type = options.type;
+    }
      moneyModel.find({})
-     .sort({date:1})
+     .sort({date:type})
      .lean()
      .exec(function(err, moneys){
          if(err){

@@ -74,6 +74,7 @@
         $.ajax({
             "type":"get",
             'url':'/getmoney',
+            'data':{'type':'-1'},
             "dataType":"json"
         }).done(function(json){
             var str = creatDom(json.roles);
