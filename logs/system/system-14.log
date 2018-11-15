@@ -19287,3 +19287,224 @@
 [2018-09-14 23:59:56.180] [ERROR] system - port 80 已被使用
 [2018-09-14 23:59:56.394] [ERROR] system - port 80 已被使用
 [2018-09-14 23:59:56.737] [ERROR] system - port 80 已被使用
+[2018-11-14 16:28:11.379] [INFO] system - 正在监听 port 8081
+[2018-11-14 18:18:42.046] [INFO] system - 正在监听 port 8081
+[2018-11-14 18:37:45.615] [INFO] system - 正在监听 port 8081
+[2018-11-14 18:39:08.647] [INFO] system - 正在监听 port 8081
+[2018-11-14 18:40:46.271] [INFO] system - 正在监听 port 8081
+[2018-11-14 18:41:55.797] [INFO] system - 正在监听 port 8081
+[2018-11-14 18:43:44.186] [INFO] system - 正在监听 port 8081
+[2018-11-14 19:00:44.711] [INFO] system - 正在监听 port 8081
+[2018-11-14 19:01:40.992] [INFO] system - 正在监听 port 8081
+[2018-11-14 19:02:17.095] [INFO] system - 正在监听 port 8081
+[2018-11-14 19:02:19.276] [ERROR] system - SyntaxError: Identifier 'phone' has already been declared
+    at Object.exports.save (/Users/didi/pershineli/nodecrm/core/services/person.service.js:65:32)
+    at exports.create (/Users/didi/pershineli/nodecrm/core/controllers/person.controller.js:84:19)
+    at Layer.handle [as handle_request] (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:317:13)
+    at /Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:275:10)
+    at serveStatic (/Users/didi/pershineli/nodecrm/node_modules/serve-static/index.js:75:16)
+    at Layer.handle [as handle_request] (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:317:13)
+    at /Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:275:10)
+    at session (/Users/didi/pershineli/nodecrm/node_modules/express-session/index.js:454:7)
+    at Layer.handle [as handle_request] (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:317:13)
+    at /Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:275:10)
+[2018-11-14 19:37:23.046] [INFO] system - 正在监听 port 8081
+[2018-11-14 19:37:25.774] [ERROR] system - SyntaxError: Identifier 'phone' has already been declared
+    at Object.exports.save (/Users/didi/pershineli/nodecrm/core/services/person.service.js:65:32)
+    at exports.create (/Users/didi/pershineli/nodecrm/core/controllers/person.controller.js:84:19)
+    at Layer.handle [as handle_request] (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:317:13)
+    at /Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:275:10)
+    at serveStatic (/Users/didi/pershineli/nodecrm/node_modules/serve-static/index.js:75:16)
+    at Layer.handle [as handle_request] (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:317:13)
+    at /Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:275:10)
+    at session (/Users/didi/pershineli/nodecrm/node_modules/express-session/index.js:454:7)
+    at Layer.handle [as handle_request] (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:317:13)
+    at /Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:275:10)
+[2018-11-14 19:38:29.974] [INFO] system - 正在监听 port 8081
+[2018-11-14 19:38:34.554] [ERROR] system - SyntaxError: Identifier 'phone' has already been declared
+    at Object.exports.save (/Users/didi/pershineli/nodecrm/core/services/person.service.js:65:32)
+    at exports.create (/Users/didi/pershineli/nodecrm/core/controllers/person.controller.js:84:19)
+    at Layer.handle [as handle_request] (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:317:13)
+    at /Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:275:10)
+    at serveStatic (/Users/didi/pershineli/nodecrm/node_modules/serve-static/index.js:75:16)
+    at Layer.handle [as handle_request] (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:317:13)
+    at /Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:275:10)
+    at session (/Users/didi/pershineli/nodecrm/node_modules/express-session/index.js:454:7)
+    at Layer.handle [as handle_request] (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:317:13)
+    at /Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:275:10)
+[2018-11-14 19:41:10.268] [INFO] system - 正在监听 port 8081
+[2018-11-14 19:41:16.154] [ERROR] system - SyntaxError: Identifier 'phone' has already been declared
+    at Object.exports.save (/Users/didi/pershineli/nodecrm/core/services/person.service.js:65:32)
+    at exports.create (/Users/didi/pershineli/nodecrm/core/controllers/person.controller.js:84:19)
+    at Layer.handle [as handle_request] (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:317:13)
+    at /Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:275:10)
+    at serveStatic (/Users/didi/pershineli/nodecrm/node_modules/serve-static/index.js:75:16)
+    at Layer.handle [as handle_request] (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:317:13)
+    at /Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:275:10)
+    at session (/Users/didi/pershineli/nodecrm/node_modules/express-session/index.js:454:7)
+    at Layer.handle [as handle_request] (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:317:13)
+    at /Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:275:10)
+[2018-11-14 19:44:04.571] [INFO] system - 正在监听 port 8081
+[2018-11-14 19:44:10.746] [ERROR] system - SyntaxError: Identifier 'phone' has already been declared
+    at Object.exports.save (/Users/didi/pershineli/nodecrm/core/services/person.service.js:65:32)
+    at exports.create (/Users/didi/pershineli/nodecrm/core/controllers/person.controller.js:84:19)
+    at Layer.handle [as handle_request] (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:317:13)
+    at /Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:275:10)
+    at serveStatic (/Users/didi/pershineli/nodecrm/node_modules/serve-static/index.js:75:16)
+    at Layer.handle [as handle_request] (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:317:13)
+    at /Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:275:10)
+    at session (/Users/didi/pershineli/nodecrm/node_modules/express-session/index.js:454:7)
+    at Layer.handle [as handle_request] (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:317:13)
+    at /Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:275:10)
+[2018-11-14 19:45:12.660] [INFO] system - 正在监听 port 8081
+[2018-11-14 19:45:15.101] [ERROR] system - SyntaxError: Identifier 'phone' has already been declared
+    at Object.exports.save (/Users/didi/pershineli/nodecrm/core/services/person.service.js:65:32)
+    at exports.create (/Users/didi/pershineli/nodecrm/core/controllers/person.controller.js:84:19)
+    at Layer.handle [as handle_request] (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/route.js:137:13)
+    at Route.dispatch (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/route.js:112:3)
+    at Layer.handle [as handle_request] (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:281:22
+    at Function.process_params (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:275:10)
+    at Function.handle (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:174:3)
+    at router (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:317:13)
+    at /Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:275:10)
+    at serveStatic (/Users/didi/pershineli/nodecrm/node_modules/serve-static/index.js:75:16)
+    at Layer.handle [as handle_request] (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:317:13)
+    at /Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:275:10)
+    at session (/Users/didi/pershineli/nodecrm/node_modules/express-session/index.js:454:7)
+    at Layer.handle [as handle_request] (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:317:13)
+    at /Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:284:7
+    at Function.process_params (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:335:12)
+    at next (/Users/didi/pershineli/nodecrm/node_modules/express/lib/router/index.js:275:10)
+[2018-11-14 19:51:45.872] [INFO] system - 正在监听 port 8081
+[2018-11-14 19:53:02.135] [INFO] system - 正在监听 port 8081
+[2018-11-14 19:54:46.227] [INFO] system - 正在监听 port 8081
+[2018-11-14 19:57:21.909] [INFO] system - 正在监听 port 8081
+[2018-11-14 19:58:42.593] [INFO] system - 正在监听 port 8081
+[2018-11-14 20:09:16.110] [INFO] system - 正在监听 port 8081
+[2018-11-14 20:10:57.102] [INFO] system - 正在监听 port 8081
+[2018-11-14 20:11:33.469] [INFO] system - 正在监听 port 8081
+[2018-11-14 20:13:24.765] [INFO] system - 正在监听 port 8081
+[2018-11-14 20:15:08.719] [INFO] system - 正在监听 port 8081
+[2018-11-14 20:15:47.535] [INFO] system - 正在监听 port 8081
+[2018-11-14 20:17:04.701] [INFO] system - 正在监听 port 8081
+[2018-11-14 20:18:24.512] [INFO] system - 正在监听 port 8081
+[2018-11-14 20:19:00.379] [INFO] system - 正在监听 port 8081
+[2018-11-14 20:20:26.446] [INFO] system - 正在监听 port 8081
+[2018-11-14 20:21:46.117] [INFO] system - 正在监听 port 8081
+[2018-11-14 20:22:12.182] [INFO] system - 正在监听 port 8081
+[2018-11-14 20:23:19.068] [INFO] system - 正在监听 port 8081
+[2018-11-14 20:24:16.417] [INFO] system - 正在监听 port 8081
+[2018-11-14 20:24:28.639] [INFO] system - 正在监听 port 8081
+[2018-11-14 20:24:57.962] [INFO] system - 正在监听 port 8081
+[2018-11-14 20:25:38.256] [INFO] system - 正在监听 port 8081
+[2018-11-14 20:26:09.006] [INFO] system - 正在监听 port 8081
+[2018-11-14 20:27:15.508] [INFO] system - 正在监听 port 8081
+[2018-11-14 20:28:22.698] [INFO] system - 正在监听 port 8081
+[2018-11-14 20:29:14.143] [INFO] system - 正在监听 port 8081
+[2018-11-14 20:29:28.505] [ERROR] system - /Users/didi/pershineli/nodecrm/core/controllers/person.controller.js { type: 'system', error: '没有传入钱数' }
+[2018-11-14 20:32:11.054] [INFO] system - 正在监听 port 8081
+[2018-11-14 20:32:14.040] [ERROR] system - /Users/didi/pershineli/nodecrm/core/controllers/person.controller.js { type: 'system', error: '没有传入钱数' }
+[2018-11-14 20:33:14.937] [INFO] system - 正在监听 port 8081
+[2018-11-14 20:33:59.516] [INFO] system - 正在监听 port 8081
+[2018-11-14 20:43:20.308] [INFO] system - 正在监听 port 8081

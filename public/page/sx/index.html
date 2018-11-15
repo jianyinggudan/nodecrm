@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>顺心理财投资委员会自荐和统计</title>
+    <link rel="stylesheet" href="/themes/default/assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/themes/default/assets/css/mobiscroll.min.css">
+    <style>
+      .page-style{
+        padding: 10px;
+      }
+      .table_div{
+        overflow-x:scroll;
+      }
+    </style>
+</head>
+<body>
+    <div class="form-inline page-style" >
+    <form id="formTable">
+      <div class="form-group">
+        <label for="selectdate">姓+(先生/女士)</label>
+        <input type="text" class="form-control" name="nickname" placeholder="请用先生或者女士代替保护隐私">
+      </div>
+      <div class="form-group">
+        <label for="moneyInput">投资额</label>
+        <input type="email" class="form-control" name="money" placeholder="小数位请保留2位">
+      </div>
+      <div class="form-group">
+        <label for="moneyInput">手机号</label>
+        <input type="email" class="form-control" maxlength="11" name="phone" placeholder="手机号展示后会做隐私处理">
+      </div>
+      <div class="form-group">
+        <label for="moneyInput">省或县</label>
+        <input type="email" class="form-control" name="province" placeholder="省或县名字">
+      </div>
+      <div class="form-group">
+        <label for="moneyInput">市</label>
+        <input type="email" class="form-control" name="city" placeholder="市名字">
+      </div>
+      <div class="form-group">
+        <label for="moneyInput">能否去现场</label>
+        <select class="form-control" name="scene">
+          <option value="1">能</option>
+          <option value="2">不能</option>
+        </select>
+      </div>
+    </form>
+      <button type="button" class="btn btn-default" id="addNew">提交</button>
+      <button type="button" class="btn btn-default" id="search">查看投票</button>
+  </div>
+  
+    <script type="text/javascript" src="/themes/default/assets/js/jquery-2.2.1.min.js"></script>
+    <script type="text/javascript" src="/themes/default/assets/js/mobiscrollv2.1.js"></script>
+    <script type="text/javascript">
+    
+     // $('#selectdate').mobiscroll(opt);
+     $('#addNew').on('click',function(){
+         var data = $('#formTable').serialize();
+         if(/=&/g.test(data)){
+          alert('填写的数据中不能为空');
+          return;
+         }
+         $.ajax({
+             "type":"post",
+             'url':'/saveperson',
+             "data":data,
+             "dataType":"json"
+         }).done(function(json){
+            if(json.err == 0){
+                console.log('添加成功');
+                $('#selectdate').val('')
+                $('#moneyInput').val('')
+            }else{
+              alert(json.msg);
+            }
+         }).fail(function(e){
+             console.log(e)
+         })
+     });
+    $('#search').on('click',function(){
+        location.href = '/page/sx/show.html'
+    });
+    $('#dataTable').on('click','.change-btn',function(){
+        console.log($(this).prev())
+    })
+    
+    </script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+[2018-11-14 18:24:04.046] [ERROR] database - /Users/didi/pershineli/nodecrm/core/controllers/person.controller.js { ValidationError: Moneys validation failed: date: Path `date` is required.
+    at ValidationError.inspect (/Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/error/validation.js:57:23)
+    at formatValue (util.js:430:38)
+    at inspect (util.js:324:10)
+    at Object.format (util.js:191:12)
+    at Object.inspect (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/layouts.js:34:23)
+    at formatValue (util.js:430:38)
+    at inspect (util.js:324:10)
+    at Object.format (util.js:253:18)
+    at formatLogData (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/layouts.js:47:22)
+    at basicLayout (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/layouts.js:109:7)
+    at Logger.<anonymous> (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/appenders/dateFile.js:35:19)
+    at emitOne (events.js:121:20)
+    at Logger.emit (events.js:211:7)
+    at Logger._log (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/logger.js:100:8)
+    at Logger.(anonymous function) [as error] (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/logger.js:93:12)
+    at /Users/didi/pershineli/nodecrm/core/controllers/person.controller.js:86:33
+    at /Users/didi/pershineli/nodecrm/core/services/money.service.js:74:26
+    at /Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/model.js:3841:16
+    at /Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/services/model/applyHooks.js:167:17
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+  errors: 
+   { date: 
+      { ValidatorError: Path `date` is required.
+    at new ValidatorError (/Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/error/validator.js:25:11)
+    at validate (/Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/schematype.js:758:13)
+    at /Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/schematype.js:805:11
+    at Array.forEach (<anonymous>)
+    at SchemaString.SchemaType.doValidate (/Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/schematype.js:765:19)
+    at /Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/document.js:1471:9
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+        message: 'Path `date` is required.',
+        name: 'ValidatorError',
+        properties: [Object],
+        kind: 'required',
+        path: 'date',
+        value: undefined,
+        reason: undefined,
+        '$isValidatorError': true } },
+  _message: 'Moneys validation failed',
+  name: 'ValidationError',
+  type: 'database' }
+[2018-11-14 18:35:40.173] [ERROR] database - /Users/didi/pershineli/nodecrm/core/controllers/person.controller.js { ValidationError: Moneys validation failed: date: Path `date` is required.
+    at ValidationError.inspect (/Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/error/validation.js:57:23)
+    at formatValue (util.js:430:38)
+    at inspect (util.js:324:10)
+    at Object.format (util.js:191:12)
+    at Object.inspect (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/layouts.js:34:23)
+    at formatValue (util.js:430:38)
+    at inspect (util.js:324:10)
+    at Object.format (util.js:253:18)
+    at formatLogData (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/layouts.js:47:22)
+    at basicLayout (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/layouts.js:109:7)
+    at Logger.<anonymous> (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/appenders/dateFile.js:35:19)
+    at emitOne (events.js:121:20)
+    at Logger.emit (events.js:211:7)
+    at Logger._log (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/logger.js:100:8)
+    at Logger.(anonymous function) [as error] (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/logger.js:93:12)
+    at /Users/didi/pershineli/nodecrm/core/controllers/person.controller.js:86:33
+    at /Users/didi/pershineli/nodecrm/core/services/money.service.js:74:26
+    at /Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/model.js:3841:16
+    at /Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/services/model/applyHooks.js:167:17
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+  errors: 
+   { date: 
+      { ValidatorError: Path `date` is required.
+    at new ValidatorError (/Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/error/validator.js:25:11)
+    at validate (/Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/schematype.js:758:13)
+    at /Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/schematype.js:805:11
+    at Array.forEach (<anonymous>)
+    at SchemaString.SchemaType.doValidate (/Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/schematype.js:765:19)
+    at /Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/document.js:1471:9
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+        message: 'Path `date` is required.',
+        name: 'ValidatorError',
+        properties: [Object],
+        kind: 'required',
+        path: 'date',
+        value: undefined,
+        reason: undefined,
+        '$isValidatorError': true } },
+  _message: 'Moneys validation failed',
+  name: 'ValidationError',
+  type: 'database' }
+[2018-11-14 18:36:38.649] [ERROR] database - /Users/didi/pershineli/nodecrm/core/controllers/person.controller.js { ValidationError: Moneys validation failed: date: Path `date` is required.
+    at ValidationError.inspect (/Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/error/validation.js:57:23)
+    at formatValue (util.js:430:38)
+    at inspect (util.js:324:10)
+    at Object.format (util.js:191:12)
+    at Object.inspect (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/layouts.js:34:23)
+    at formatValue (util.js:430:38)
+    at inspect (util.js:324:10)
+    at Object.format (util.js:253:18)
+    at formatLogData (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/layouts.js:47:22)
+    at basicLayout (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/layouts.js:109:7)
+    at Logger.<anonymous> (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/appenders/dateFile.js:35:19)
+    at emitOne (events.js:121:20)
+    at Logger.emit (events.js:211:7)
+    at Logger._log (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/logger.js:100:8)
+    at Logger.(anonymous function) [as error] (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/logger.js:93:12)
+    at /Users/didi/pershineli/nodecrm/core/controllers/person.controller.js:86:33
+    at /Users/didi/pershineli/nodecrm/core/services/money.service.js:74:26
+    at /Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/model.js:3841:16
+    at /Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/services/model/applyHooks.js:167:17
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+  errors: 
+   { date: 
+      { ValidatorError: Path `date` is required.
+    at new ValidatorError (/Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/error/validator.js:25:11)
+    at validate (/Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/schematype.js:758:13)
+    at /Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/schematype.js:805:11
+    at Array.forEach (<anonymous>)
+    at SchemaString.SchemaType.doValidate (/Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/schematype.js:765:19)
+    at /Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/document.js:1471:9
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+        message: 'Path `date` is required.',
+        name: 'ValidatorError',
+        properties: [Object],
+        kind: 'required',
+        path: 'date',
+        value: undefined,
+        reason: undefined,
+        '$isValidatorError': true } },
+  _message: 'Moneys validation failed',
+  name: 'ValidationError',
+  type: 'database' }
+[2018-11-14 18:39:11.956] [ERROR] database - /Users/didi/pershineli/nodecrm/core/controllers/person.controller.js { ValidationError: Moneys validation failed: date: Path `date` is required.
+    at ValidationError.inspect (/Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/error/validation.js:57:23)
+    at formatValue (util.js:430:38)
+    at inspect (util.js:324:10)
+    at Object.format (util.js:191:12)
+    at Object.inspect (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/layouts.js:34:23)
+    at formatValue (util.js:430:38)
+    at inspect (util.js:324:10)
+    at Object.format (util.js:253:18)
+    at formatLogData (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/layouts.js:47:22)
+    at basicLayout (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/layouts.js:109:7)
+    at Logger.<anonymous> (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/appenders/dateFile.js:35:19)
+    at emitOne (events.js:121:20)
+    at Logger.emit (events.js:211:7)
+    at Logger._log (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/logger.js:100:8)
+    at Logger.(anonymous function) [as error] (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/logger.js:93:12)
+    at /Users/didi/pershineli/nodecrm/core/controllers/person.controller.js:86:33
+    at /Users/didi/pershineli/nodecrm/core/services/money.service.js:74:26
+    at /Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/model.js:3841:16
+    at /Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/services/model/applyHooks.js:167:17
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+  errors: 
+   { date: 
+      { ValidatorError: Path `date` is required.
+    at new ValidatorError (/Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/error/validator.js:25:11)
+    at validate (/Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/schematype.js:758:13)
+    at /Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/schematype.js:805:11
+    at Array.forEach (<anonymous>)
+    at SchemaString.SchemaType.doValidate (/Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/schematype.js:765:19)
+    at /Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/document.js:1471:9
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+        message: 'Path `date` is required.',
+        name: 'ValidatorError',
+        properties: [Object],
+        kind: 'required',
+        path: 'date',
+        value: undefined,
+        reason: undefined,
+        '$isValidatorError': true } },
+  _message: 'Moneys validation failed',
+  name: 'ValidationError',
+  type: 'database' }
+[2018-11-14 18:40:48.495] [ERROR] database - /Users/didi/pershineli/nodecrm/core/controllers/person.controller.js { ValidationError: Moneys validation failed: date: Path `date` is required.
+    at ValidationError.inspect (/Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/error/validation.js:57:23)
+    at formatValue (util.js:430:38)
+    at inspect (util.js:324:10)
+    at Object.format (util.js:191:12)
+    at Object.inspect (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/layouts.js:34:23)
+    at formatValue (util.js:430:38)
+    at inspect (util.js:324:10)
+    at Object.format (util.js:253:18)
+    at formatLogData (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/layouts.js:47:22)
+    at basicLayout (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/layouts.js:109:7)
+    at Logger.<anonymous> (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/appenders/dateFile.js:35:19)
+    at emitOne (events.js:121:20)
+    at Logger.emit (events.js:211:7)
+    at Logger._log (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/logger.js:100:8)
+    at Logger.(anonymous function) [as error] (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/logger.js:93:12)
+    at /Users/didi/pershineli/nodecrm/core/controllers/person.controller.js:86:33
+    at /Users/didi/pershineli/nodecrm/core/services/money.service.js:74:26
+    at /Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/model.js:3841:16
+    at /Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/services/model/applyHooks.js:167:17
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+  errors: 
+   { date: 
+      { ValidatorError: Path `date` is required.
+    at new ValidatorError (/Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/error/validator.js:25:11)
+    at validate (/Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/schematype.js:758:13)
+    at /Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/schematype.js:805:11
+    at Array.forEach (<anonymous>)
+    at SchemaString.SchemaType.doValidate (/Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/schematype.js:765:19)
+    at /Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/document.js:1471:9
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+        message: 'Path `date` is required.',
+        name: 'ValidatorError',
+        properties: [Object],
+        kind: 'required',
+        path: 'date',
+        value: undefined,
+        reason: undefined,
+        '$isValidatorError': true } },
+  _message: 'Moneys validation failed',
+  name: 'ValidationError',
+  type: 'database' }
+[2018-11-14 18:41:58.520] [ERROR] database - /Users/didi/pershineli/nodecrm/core/controllers/person.controller.js { ValidationError: Moneys validation failed: date: Path `date` is required.
+    at ValidationError.inspect (/Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/error/validation.js:57:23)
+    at formatValue (util.js:430:38)
+    at inspect (util.js:324:10)
+    at Object.format (util.js:191:12)
+    at Object.inspect (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/layouts.js:34:23)
+    at formatValue (util.js:430:38)
+    at inspect (util.js:324:10)
+    at Object.format (util.js:253:18)
+    at formatLogData (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/layouts.js:47:22)
+    at basicLayout (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/layouts.js:109:7)
+    at Logger.<anonymous> (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/appenders/dateFile.js:35:19)
+    at emitOne (events.js:121:20)
+    at Logger.emit (events.js:211:7)
+    at Logger._log (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/logger.js:100:8)
+    at Logger.(anonymous function) [as error] (/Users/didi/pershineli/nodecrm/node_modules/log4js/lib/logger.js:93:12)
+    at /Users/didi/pershineli/nodecrm/core/controllers/person.controller.js:86:33
+    at /Users/didi/pershineli/nodecrm/core/services/money.service.js:74:26
+    at /Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/model.js:3841:16
+    at /Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/services/model/applyHooks.js:167:17
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+  errors: 
+   { date: 
+      { ValidatorError: Path `date` is required.
+    at new ValidatorError (/Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/error/validator.js:25:11)
+    at validate (/Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/schematype.js:758:13)
+    at /Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/schematype.js:805:11
+    at Array.forEach (<anonymous>)
+    at SchemaString.SchemaType.doValidate (/Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/schematype.js:765:19)
+    at /Users/didi/pershineli/nodecrm/node_modules/mongoose/lib/document.js:1471:9
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+        message: 'Path `date` is required.',
+        name: 'ValidatorError',
+        properties: [Object],
+        kind: 'required',
+        path: 'date',
+        value: undefined,
+        reason: undefined,
+        '$isValidatorError': true } },
+  _message: 'Moneys validation failed',
+  name: 'ValidationError',
+  type: 'database' }
+[2018-11-14 18:47:40.984] [ERROR] database - /Users/didi/pershineli/nodecrm/core/controllers/person.controller.js { MongoError: E11000 duplicate key error collection: nodercms.persons index: phone_1 dup key: { : "13581923554" }
+    at Function.MongoError.create (/Users/didi/pershineli/nodecrm/node_modules/mongoose/node_modules/mongodb-core/lib/error.js:31:11)
+    at toError (/Users/didi/pershineli/nodecrm/node_modules/mongoose/node_modules/mongodb/lib/utils.js:139:22)
+    at /Users/didi/pershineli/nodecrm/node_modules/mongoose/node_modules/mongodb/lib/collection.js:669:23
+    at handleCallback (/Users/didi/pershineli/nodecrm/node_modules/mongoose/node_modules/mongodb/lib/utils.js:120:56)
+    at /Users/didi/pershineli/nodecrm/node_modules/mongoose/node_modules/mongodb/lib/bulk/unordered.js:465:9
+    at handleCallback (/Users/didi/pershineli/nodecrm/node_modules/mongoose/node_modules/mongodb/lib/utils.js:120:56)
+    at resultHandler (/Users/didi/pershineli/nodecrm/node_modules/mongoose/node_modules/mongodb/lib/bulk/unordered.js:413:5)
+    at /Users/didi/pershineli/nodecrm/node_modules/mongoose/node_modules/mongodb-core/lib/connection/pool.js:469:18
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+  name: 'MongoError',
+  message: 'E11000 duplicate key error collection: nodercms.persons index: phone_1 dup key: { : "13581923554" }',
+  driver: true,
+  code: 11000,
+  index: 0,
+  errmsg: 'E11000 duplicate key error collection: nodercms.persons index: phone_1 dup key: { : "13581923554" }',
+  getOperation: [Function],
+  toJSON: [Function],
+  toString: [Function],
+  type: 'database' }
+[2018-11-14 19:00:51.315] [ERROR] database - /Users/didi/pershineli/nodecrm/core/controllers/person.controller.js { MongoError: E11000 duplicate key error collection: nodercms.persons index: phone_1 dup key: { : "13581923554" }
+    at Function.MongoError.create (/Users/didi/pershineli/nodecrm/node_modules/mongoose/node_modules/mongodb-core/lib/error.js:31:11)
+    at toError (/Users/didi/pershineli/nodecrm/node_modules/mongoose/node_modules/mongodb/lib/utils.js:139:22)
+    at /Users/didi/pershineli/nodecrm/node_modules/mongoose/node_modules/mongodb/lib/collection.js:669:23
+    at handleCallback (/Users/didi/pershineli/nodecrm/node_modules/mongoose/node_modules/mongodb/lib/utils.js:120:56)
+    at /Users/didi/pershineli/nodecrm/node_modules/mongoose/node_modules/mongodb/lib/bulk/unordered.js:465:9
+    at handleCallback (/Users/didi/pershineli/nodecrm/node_modules/mongoose/node_modules/mongodb/lib/utils.js:120:56)
+    at resultHandler (/Users/didi/pershineli/nodecrm/node_modules/mongoose/node_modules/mongodb/lib/bulk/unordered.js:413:5)
+    at /Users/didi/pershineli/nodecrm/node_modules/mongoose/node_modules/mongodb-core/lib/connection/pool.js:469:18
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+  name: 'MongoError',
+  message: 'E11000 duplicate key error collection: nodercms.persons index: phone_1 dup key: { : "13581923554" }',
+  driver: true,
+  code: 11000,
+  index: 0,
+  errmsg: 'E11000 duplicate key error collection: nodercms.persons index: phone_1 dup key: { : "13581923554" }',
+  getOperation: [Function],
+  toJSON: [Function],
+  toString: [Function],
+  type: 'database' }
+[2018-11-14 19:01:45.662] [ERROR] database - /Users/didi/pershineli/nodecrm/core/controllers/person.controller.js { MongoError: E11000 duplicate key error collection: nodercms.persons index: phone_1 dup key: { : "13581923554" }
+    at Function.MongoError.create (/Users/didi/pershineli/nodecrm/node_modules/mongoose/node_modules/mongodb-core/lib/error.js:31:11)
+    at toError (/Users/didi/pershineli/nodecrm/node_modules/mongoose/node_modules/mongodb/lib/utils.js:139:22)
+    at /Users/didi/pershineli/nodecrm/node_modules/mongoose/node_modules/mongodb/lib/collection.js:669:23
+    at handleCallback (/Users/didi/pershineli/nodecrm/node_modules/mongoose/node_modules/mongodb/lib/utils.js:120:56)
+    at /Users/didi/pershineli/nodecrm/node_modules/mongoose/node_modules/mongodb/lib/bulk/unordered.js:465:9
+    at handleCallback (/Users/didi/pershineli/nodecrm/node_modules/mongoose/node_modules/mongodb/lib/utils.js:120:56)
+    at resultHandler (/Users/didi/pershineli/nodecrm/node_modules/mongoose/node_modules/mongodb/lib/bulk/unordered.js:413:5)
+    at /Users/didi/pershineli/nodecrm/node_modules/mongoose/node_modules/mongodb-core/lib/connection/pool.js:469:18
+    at _combinedTickCallback (internal/process/next_tick.js:131:7)
+    at process._tickCallback (internal/process/next_tick.js:180:9)
+  name: 'MongoError',
+  message: 'E11000 duplicate key error collection: nodercms.persons index: phone_1 dup key: { : "13581923554" }',
+  driver: true,
+  code: 11000,
+  index: 0,
+  errmsg: 'E11000 duplicate key error collection: nodercms.persons index: phone_1 dup key: { : "13581923554" }',
+  getOperation: [Function],
+  toJSON: [Function],
+  toString: [Function],
+  type: 'database' }

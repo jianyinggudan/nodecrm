@@ -18,6 +18,10 @@ module.exports = {
       get: 'getmoney.list',
       post: 'getmoney.create'
   },
+  '/saveperson':{
+      get: 'person.list',
+      post: 'person.create'
+  },
   /**
    * API
    */
