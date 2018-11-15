@@ -24,7 +24,8 @@ exports.list =  function(req, res){
             "err":"0",
             "roles":roles,
             "allCount":allCount,
-            "today":today
+            "today":today,
+            "time":formatDateTime(new Date().getTime())
         }
         res.status(200).json(endData);
     })
@@ -65,3 +66,19 @@ exports.list =  function(req, res){
          res.status(200).json(data);
      })
  }
+function formatDateTime(inputTime) {  
+    var date = new Date(inputTime);
+    var y = date.getFullYear();  
+    var m = date.getMonth() + 1;  
+    m = m < 10 ? ('0' + m) : m;  
+    var d = date.getDate();  
+    d = d < 10 ? ('0' + d) : d;  
+    // var h = date.getHours();
+    // h = h < 10 ? ('0' + h) : h;
+    // var minute = date.getMinutes();
+    // var second = date.getSeconds();
+    // minute = minute < 10 ? ('0' + minute) : minute;  
+    // second = second < 10 ? ('0' + second) : second; 
+    // return y + '-' + m + '-' + d+' '+h+':'+minute+':'+second;  
+    return y + '-' + m + '-' + d;  
+}

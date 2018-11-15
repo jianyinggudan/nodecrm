@@ -46,7 +46,7 @@ html,body{
 
   <div id="content">
     <div class="con_div" style="display: block;">
-        <p class="top_txt">今日回款：<span id="todySpan">暂未公布</span>&nbsp;累计天数:<span id="allDay"></span>天</p>
+        <p class="top_txt">今日回款（<span id="todayTime"></span>）：<span id="todySpan">暂未公布</span>&nbsp;累计天数:<span id="allDay"></span>天</p>
         <ul class="txt_ul">
             <li>昨日回款</li>
             <li>总回款额</li>
@@ -154,7 +154,7 @@ $.ajax({
         })
         var option = getOption(datalist,moneyArr);
 
-        init(option,json.allCount,moneyArr,datalist,json.today)
+        init(option,json.allCount,moneyArr,datalist,json.today,json.time)
     }else{
         alert('数据错误有误')
     }
@@ -250,7 +250,7 @@ function initAdvice(allData){
     $('#qtTxt').html(allData.qttxt);
 }
 
-function init(option,allCount,moneyArr,dataList,betrue){
+function init(option,allCount,moneyArr,dataList,betrue,time){
     // $('#wqTxt').html(allData.wqtxt);
     // $('#qtTxt').html(allData.qttxt);
     $(".tabs li a").on('click',function(){
@@ -267,6 +267,7 @@ function init(option,allCount,moneyArr,dataList,betrue){
             // echarts.init(document.getElementById('main2')).setOption(option1);
         }
     });
+    $('#todayTime').text(time);
     if(betrue){
         $('#todySpan').text(moneyArr[moneyArr.length - 1] + '万');
         $('#showUl').find('li').eq(0).text(moneyArr[moneyArr.length - 2]+ ' 万')
