@@ -78,9 +78,8 @@ var _hmt = _hmt || [];
              "dataType":"json"
          }).done(function(json){
             if(json.err == 0){
-                console.log('添加成功');
-                $('#selectdate').val('')
-                $('#moneyInput').val('')
+                alert('添加成功');
+                location.reload();
             }else{
               alert(json.msg);
             }
