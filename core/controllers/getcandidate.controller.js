@@ -1,38 +1,34 @@
 var logger = require('../../lib/logger.lib');
-var moneyServer = require('../services/money.service');
+var candidateServer = require('../services/candidate.service');
 
 /**
  * 获取列表
  */
 exports.list =  function(req, res){
     var cookieList = getCookie(req);
-    myCookie = ""
-    if(cookieList.myCookie){
-        myCookie = cookieList.myCookie;
+    codeId = ""
+    if(cookieList.codeId){
+        codeId = cookieList.codeId;
     }
-    console.log('ip是',getClientIP(req))
-    console.log('cookie',(new Date()).getTime(),getCookie(req))
-    moneyServer.all({"type":req.query.type},function(err, roles){
-        var allCount = 0;
-        var today = false;
+
+
+    candidateServer.all({"type":req.query.type},function(err, roles){
+        
         if(err){
             logger[err.type]().error(err);
             return res.status(500).end();
         }
-        time = roles[roles.length - 1].date.split('-');
-        if(new Date().getTime() == new Date().setFullYear(time[0],Number(time[1]) - 1,time[2])){
-            today = true;
-        }
-        for(var i = 0; i < roles.length; i ++){
-            allCount += (roles[i].money - 0)
-        }
+        // time = roles[roles.length - 1].date.split('-');
+        // if(new Date().getTime() == new Date().setFullYear(time[0],Number(time[1]) - 1,time[2])){
+        //     today = true;
+        // }
+        // for(var i = 0; i < roles.length; i ++){
+        //     allCount += (roles[i].money - 0)
+        // }
         var endData = {
             "err":"0",
-            "roles":roles,
-            "allCount":allCount,
-            "today":today,
-            "time":formatDateTime(new Date().getTime()),
-            "myCookie":myCookie
+            "data":roles,
+            "codeId":codeId
         }
         res.status(200).json(endData);
     })
@@ -42,27 +38,31 @@ exports.list =  function(req, res){
  */
  exports.create = function(req, res){
     var nowtime = new Date().getTime();
-
-     req.checkBody({
-         'date':{
- 			notEmpty: {
- 				options: [true],
- 				errorMessage: 'data 不能为空'
- 			}
- 		},
-         'money':{
-             notEmpty: {
-  				options: [true],
-  				errorMessage: 'money 不能为空'
-  			}
-         }
-     });
+    nowtime += parseInt(Math.random()*100000);
+    var _ip = getClientIP(req);
+   //   req.checkBody({
+   //       'date':{
+ 		// 	notEmpty: {
+ 		// 		options: [true],
+ 		// 		errorMessage: 'data 不能为空'
+ 		// 	}
+ 		// },
+   //       'money':{
+   //           notEmpty: {
+  	// 			options: [true],
+  	// 			errorMessage: 'money 不能为空'
+  	// 		}
+   //       }
+   //   });
      var data = {
-         date: req.body.date,
-         money: req.body.money || 0
+         nickname: req.body.nickname,
+         qq: req.body.qq||"",
+         wechat: req.body.wechat||"",
+         introduct: req.body.introduct||"",
+         count: req.body.count||0
      }
      // console.log(data)
-     moneyServer.save({data: data },function(err, role){
+     candidateServer.save({data: data },function(err, role){
          if(err){
              logger[err.type]().error(__filename, err);
              return res.status(500).end();
@@ -71,10 +71,11 @@ exports.list =  function(req, res){
              'err':0,
              'data':role
          }
-         res.cookie('myCookie', nowtime);
+         // res.cookie('codeId', nowtime);
+         // res.cookie('myIp',_ip);
          res.status(200).json(data);
         // res.writeHead(200, {
-        //     'Set-Cookie': 'myCookie='+nowtime,
+        //     'Set-Cookie': 'codeId='+nowtime,
         //     'Content-Type': 'text/plain'
         // });
      })

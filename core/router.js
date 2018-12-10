@@ -22,6 +22,10 @@ module.exports = {
       get: 'person.list',
       post: 'person.create'
   },
+  '/createCand':{
+      get: 'getcandidate.list',
+      post: 'getcandidate.create'
+  },
   /**
    * API
    */

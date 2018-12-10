@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>贝米债信委人员投票页面</title>
+    <link rel="stylesheet" href="/themes/default/assets/css/bootstrap.min.css">
+    <script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?02cc4534f4dfd9284cda1dc311336dbd";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+    <style>
+      .page-style{
+        padding: 10px;
+      }
+      .table_div{
+        padding: 10px 0;
+      }
+    </style>
+</head>
+<body>
+  <div class="table_div">
+    <table class="table table-condensed" id="dataTable" >
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>投资额(元/万元)</th>
+                <th>手机号</th>
+                <th>省</th>
+                <th>市(或县)</th>
+                <th>能否去现场</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+</div>
+<script type="text/javascript" src="/themes/default/assets/js/jquery-2.2.1.min.js"></script>
+<script>
+$(function(){
+
+  $.ajax({
+            "type":"get",
+            'url':'/createCand',
+            'data':{'type':'-1'},
+            "dataType":"json"
+        }).done(function(json){
+          console.log(json)
+            // var str = creatDom(json.data);
+            // $('#dataTable tbody').html(str);
+        }).fail(function(e){
+            console.log(e)
+        })
+})
+  function creatDom(arr){
+        var tmp = []
+        for(var i = 0; i < arr.length; i++){
+            tmp.push('<tr><td>'+arr[i].nickname+'</td>')
+            tmp.push('<td>'+ arr[i].money+'</td>')
+            tmp.push('<td>'+ arr[i].mphone +'</td>')
+            tmp.push('<td>'+ arr[i].province +'</td>')
+            tmp.push('<td>'+ arr[i].city +'</td>');
+            if(arr[i].scene == '1'){
+              tmp.push('<td>能</td>')
+            }else{
+              tmp.push('<td>不能</td>')
+            }
+
+            tmp.push('</tr>')
+        }
+        return tmp.join('')
+    }
+</script>
+</body>
+</html>
