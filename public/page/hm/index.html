@@ -183,6 +183,14 @@ $(function(){
             return '577266399';
         }
     });
+    clipboard.on('success', function(e) {
+        alert('复制成功')
+        console.log(e);
+    });
+
+    clipboard.on('error', function(e) {
+        alert('复制失败')
+    });
 $.ajax({
     'url':'/getmoney',
     'dataType':'json'
