@@ -22,7 +22,29 @@ var adviceModel = require('../models/advice.model');
          callback(null, moneys)
      });
  }
-
+/**
+  获取分页数据
+*/
+exports.split = function(options,callback){
+    let page = 1,pagenum = 10;
+    if(options.page){
+        page = options.page;
+    }
+    if(options.pagenum){
+        pagenum = options.pagenum;
+    }
+    moneyModel.find({})
+    .skp(page)
+    .limt(pagenum)
+    .sort({'data':1})
+    .exec(function(err, moneys){
+        if(err){
+            err.type = "database";
+            return callback(err)
+        }
+        callback(null, moneys)
+    })
+}
 /**
  * 单个数据
  */
