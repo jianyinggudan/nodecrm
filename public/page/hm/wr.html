@@ -84,7 +84,28 @@
         })
     });
     $('#dataTable').on('click','.change-btn',function(){
-        console.log($(this).prev())
+        var _id = $(this).prev().val();
+        var _data = $(this).parents('tr').find('input').eq(0).val();
+        var _money = $(this).parents('tr').find('input').eq(1).val();
+        var data = {
+            'date':_data,
+            'money':_money,
+            '_id':_id
+        }
+        $.ajax({
+            "type":"post",
+            'url':'/getmoney',
+            "data":data,
+            "dataType":"json"
+        }).done(function(json){
+           if(json.err == 0){
+               console.log('添加成功');
+
+           }
+        }).fail(function(e){
+            console.log(e)
+        })
+        console.log(data)
     })
     function creatDom(arr){
         var tmp = []
