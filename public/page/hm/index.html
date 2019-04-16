@@ -30,7 +30,7 @@ html,body{
     height: 100%
 }
 div.wrap{
-    height: 70%;
+    height: 78%;
 }
 .con_div h6{
     padding-left: 40px;
@@ -52,7 +52,7 @@ div.wrap{
     color: #fff;
     padding: 10px 20px;
 }
-.btn{
+.btn,.btn1{
     line-height: 1.5;
     display: inline-block;
     font-weight: 400;
@@ -69,6 +69,10 @@ div.wrap{
     background-color: #2395f1;
     border-color: #2395f1;
     text-decoration: none;
+}
+.btn1{
+    padding: 2px 4px;
+    margin: 0 2px;
 }
 .bot_div{
     text-align: center;
@@ -112,7 +116,8 @@ div.wrap{
             <li></li>
         </ul>
         <p class="nor_txt">
-            大家可以查看下<a href="https://mp.weixin.qq.com/s?__biz=MzU5NDcxMjI1Mw==&mid=2247483987&idx=1&sn=1b5a38c216523f0f0f6fb9975b80d9c4">21号经侦通气会--审计数据分析</a>，看看审计数据内容，是不是骗局希望更多的人能看懂！
+            距离617(6月17)只有两个月时间，贝米案件就要移交起诉了，难友们不要再坐等天地良心，都积极关注起来，参加线上线下多种形式的维权活动，可以给难友集中营公众号后台留言，或者点击加入我们！时间紧迫，需要每一位难友的关注！愿意众筹，愿意宣传，愿意号召的人请添加微信taifengyang<a class="btn1" href="javascript:;" id="firstBtn">复制</a>或者wen585260<a class="btn1" href="javascript:;" id="secondBtn">复制</a>,提供实名验证，投资截图进群。
+            只参加众筹的难友可以在关注群消息，后面公布众筹方式。  <br> ---致贝米难友
         </p>
     </div>
     <div class="con_div">
@@ -207,6 +212,23 @@ $(function(){
             return '577266399';
         }
     });
+    var firstClip = new ClipboardJS('#firstBtn',{
+        text:function(){
+            return 'taifengyang';
+        }
+    })
+    firstClip.on('success',function(){
+        alert('taifengyang复制成功')
+    })
+
+    var sencondClip = new ClipboardJS('#secondBtn',{
+        text:function(){
+            return 'wen585260'
+        }
+    })
+    sencondClip.on('success',function(){
+        alert('wen585260复制成功')
+    })
     clipboard.on('success', function(e) {
         alert('复制成功')
         console.log(e);
